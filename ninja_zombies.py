@@ -26,6 +26,13 @@ floor_square = pygame.transform.scale(floor_square, (200, 50))
 text_surface = test_font.render('Kills:', False, 'White')
 
 
+# Draw the floor with one function
+def draw_floor( floor_square, floor_tiles):
+    for x in floor_tiles:
+        screen.blit(floor_square,x)
+
+
+
 def main():
     game_running = True
     while game_running:
@@ -36,7 +43,7 @@ def main():
             elif event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_RIGHT:
                     direction = 1
-                elif event.key == K_LEFT:
+                elif event.key == pygame.K_LEFT:
                     direction = -1
             elif event.type == pygame.KEYUP:
                 if event.key == pygame.K_RIGHT or event.key == pygame.K_LEFT:
@@ -46,10 +53,11 @@ def main():
 
         screen.blit(background, (0, 0))
         # Pygrame draws un order of code, so floor must be drawn after the background
-        screen.blit(floor_square,(0, 350))
-        screen.blit(floor_square, (200, 350))
-        screen.blit(floor_square,(400, 350))
-        screen.blit(floor_square, (600, 350))
+        draw_floor(floor_square, [(0,350),(200, 350),(400, 350),(600, 350)])
+        # screen.blit(floor_square,(0, 350))
+        # screen.blit(floor_square, (200, 350))
+        # screen.blit(floor_square,(400, 350))
+        # screen.blit(floor_square, (600, 350))
         screen.blit(text_surface, (650, 20))
 
         pygame.display.update()
