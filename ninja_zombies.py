@@ -21,7 +21,7 @@ background = pygame.image.load('ninja_zombies/resources/graveyardtilesetnew/png/
 background = pygame.transform.scale(background, (SCREEN_WIDTH, SCREEN_HEIGHT))
 # Floor tiles
 floor_square = pygame.image.load('ninja_zombies/resources/graveyardtilesetnew/png/Tiles/Tile (2).png')
-floor_square = pygame.transform.scale(floor_square, (200, 50))
+floor_square = pygame.transform.scale(floor_square, (100, 50))
 #Text surface
 text_surface = test_font.render('Kills:', False, 'White')
 
@@ -53,7 +53,7 @@ def main():
 
         screen.blit(background, (0, 0))
         # Pygrame draws un order of code, so floor must be drawn after the background
-        draw_floor(floor_square, [(0,350),(200, 350),(400, 350),(600, 350)])
+        draw_floor(floor_square, [(0,350),(100, 350), (200, 350), (300, 350), (400, 350), (500, 350), (600, 350), (700, 350) ])
         # screen.blit(floor_square,(0, 350))
         # screen.blit(floor_square, (200, 350))
         # screen.blit(floor_square,(400, 350))
