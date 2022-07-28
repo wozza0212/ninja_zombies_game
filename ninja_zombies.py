@@ -17,10 +17,10 @@ SCREEN_HEIGHT = 400
 SCREEN_WIDTH = 800
 
 # Any time you import a new image into pygame, it is classed as anew surface
-background = pygame.image.load('ninja_zombies/resources/graveyardtilesetnew/png/BG.png')
+background = pygame.image.load('resources/graveyardtilesetnew/png/BG.png')
 background = pygame.transform.scale(background, (SCREEN_WIDTH, SCREEN_HEIGHT))
 # Floor tiles
-floor_square = pygame.image.load('ninja_zombies/resources/graveyardtilesetnew/png/Tiles/Tile (2).png')
+floor_square = pygame.image.load('resources/graveyardtilesetnew/png/Tiles/Tile (2).png')
 floor_square = pygame.transform.scale(floor_square, (100, 50))
 #Text surface
 text_surface = test_font.render('Kills:', False, 'White')
